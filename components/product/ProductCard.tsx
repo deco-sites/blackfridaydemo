@@ -98,7 +98,7 @@ function ProductCard(
     <a
       href={url && relative(url)}
       aria-label="view product"
-      class="btn btn-block"
+      class="btn btn-block !bg-[#000] !text-[#FFF]"
     >
       {l?.basics?.ctaText || "Comprar"}
     </a>
