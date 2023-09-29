@@ -76,6 +76,8 @@ function ProductCard(
   const { listPrice, price, installments } = useOffer(offers);
   const possibilities = useVariantPossibilities(hasVariant, product);
   const variants = Object.entries(Object.values(possibilities)[0] ?? {});
+  let discount;
+  if(listPrice && price) discount = Math.floor((price / listPrice)*100)
 
   const l = layout;
   const align =
@@ -105,7 +107,7 @@ function ProductCard(
   return (
     <div
       id={id}
-      class={`card card-compact group w-full ${
+      class={`card card-compact group w-full bg-[#FFF] ${
         align === "center" ? "text-center" : "text-center"
       } ${l?.onMouseOver?.showCardShadow ? "lg:hover:card-bordered" : ""}
         ${
@@ -135,6 +137,10 @@ function ProductCard(
         class="relative overflow-hidden"
         style={{ aspectRatio: `${WIDTH} / ${HEIGHT}` }}
       >
+        {
+          discount &&
+           <span class={"absolute top-[195px] p-[5px] right-[186px] -left-[61px] w-[148px] text-centerpy-2 px-4 bg-[#000] rotate-[270deg] text-white text-[10px] lg:text-sm font-black"} >BLACK FRIDAY</span>
+        }
         {/* Wishlist button */}
         <div
           class={`absolute top-2 z-10
@@ -233,14 +239,14 @@ function ProductCard(
             <div class="flex flex-col gap-0">
               {l?.hide?.productName ? "" : (
                 <h2
-                  class="truncate text-base lg:text-lg text-base-content"
+                  class=" text-base lg:text-lg text-base-content"
                   dangerouslySetInnerHTML={{ __html: name ?? "" }}
                 />
               )}
               {l?.hide?.productDescription ? "" : (
                 <div
                   class="truncate text-sm lg:text-sm text-neutral"
-                  dangerouslySetInnerHTML={{ __html: description ?? "" }}
+                  dangerouslySetInnerHTML={{ __html: "" }}
                 />
               )}
             </div>
@@ -255,20 +261,20 @@ function ProductCard(
               } ${align === "center" ? "justify-center" : "justify-start"}`}
             >
               <div
-                class={`line-through text-base-300 text-xs ${
+                class={`line-through text-[red] text-xs ${
                   l?.basics?.oldPriceSize === "Normal" ? "lg:text-xl" : ""
                 }`}
               >
                 {formatPrice(listPrice, offers?.priceCurrency)}
               </div>
-              <div class="text-accent text-base lg:text-xl">
+              <div class="text-[#000] font-bold text-base lg:text-xl">
                 {formatPrice(price, offers?.priceCurrency)}
               </div>
             </div>
             {l?.hide?.installments
               ? ""
               : (
-                <div class="text-base-300 text-sm lg:text-base truncate">
+                <div class="text-base-300 text-sm lg:text-base truncate ">
                   ou {installments}
                 </div>
               )}
