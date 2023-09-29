@@ -1,23 +1,48 @@
 import type { Props as SearchbarProps } from "$store/components/search/Searchbar.tsx";
 import Drawers from "$store/islands/Header/Drawers.tsx";
-import { usePlatform } from "$store/sdk/usePlatform.tsx";
+import type { Product, Suggestion } from "apps/commerce/types.ts";
 import type { ImageWidget } from "apps/admin/widgets.ts";
-import type { NavItem } from "apps/commerce/types.ts";
-import Alert from "./Alert.tsx";
 import Navbar from "./Navbar.tsx";
 import { headerHeight } from "./constants.ts";
+import { usePlatform } from "$store/sdk/usePlatform.tsx";
+
+export interface NavItem {
+  label: string;
+  href: string;
+  children?: Array<{
+    label: string;
+    href: string;
+    children?: Array<{
+      label: string;
+      href: string;
+    }>;
+  }>;
+  image?: {
+    src?: ImageWidget;
+    alt?: string;
+  };
+}
 
 export interface Props {
   alerts: string[];
-
   /** @title Search Bar */
-  searchbar?: Omit<SearchbarProps, "platform">;
-
+  searchbar?: SearchbarProps;
   /**
    * @title Navigation items
    * @description Navigation items used both on mobile and desktop menus
    */
-  navItems?: NavItem[] | null;
+  navItems?: NavItem[];
+
+  /**
+   * @title Product suggestions
+   * @description Product suggestions displayed on search
+   */
+  products?: Product[] | null;
+
+  /**
+   * @title Enable Top Search terms
+   */
+  suggestions?: Suggestion | null;
 
   /** @title Logo */
   logo?: { src: ImageWidget; alt: string };
@@ -25,28 +50,26 @@ export interface Props {
 
 function Header({
   alerts,
-  searchbar,
-  navItems,
+  searchbar: _searchbar,
+  products,
+  navItems = [],
+  suggestions,
   logo,
 }: Props) {
   const platform = usePlatform();
-  const items = navItems ?? [];
+  const searchbar = { ..._searchbar, products, suggestions };
 
   return (
     <>
       <header style={{ height: headerHeight }}>
         <Drawers
-          menu={{ items }}
+          menu={{ items: navItems }}
           searchbar={searchbar}
           platform={platform}
         >
           <div class="bg-base-100 fixed w-full z-50">
-            <Alert alerts={alerts} />
-            <Navbar
-              items={items}
-              searchbar={searchbar && { ...searchbar, platform }}
-              logo={logo}
-            />
+           
+            <Navbar items={navItems} searchbar={searchbar} logo={logo} />
           </div>
         </Drawers>
       </header>

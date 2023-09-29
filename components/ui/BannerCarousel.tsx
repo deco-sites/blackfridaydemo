@@ -49,12 +49,10 @@ const DEFAULT_PROPS = {
         href: "https://www.deco.cx/",
         label: "deco.cx",
         title: "Demo Store",
-        subTitle: "Visit our site and start building now:",
+        subTitle: "Visit our site and start building now:"
       },
-      mobile:
-        "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/239/24278f9e-412d-4a8a-b2d3-57353bb1b368",
-      desktop:
-        "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/239/afa2c07c-74f4-496d-8647-5cc58f48117b",
+      mobile: "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/239/24278f9e-412d-4a8a-b2d3-57353bb1b368",
+      desktop: "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/239/afa2c07c-74f4-496d-8647-5cc58f48117b"
     },
     {
       alt: "/feminino",
@@ -62,12 +60,10 @@ const DEFAULT_PROPS = {
         href: "https://www.deco.cx/",
         label: "deco.cx",
         title: "Demo Store",
-        subTitle: "Visit our site and start building now:",
+        subTitle: "Visit our site and start building now:"
       },
-      mobile:
-        "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/239/eeaa624c-a3e1-45e8-a6fe-034233cfbcd0",
-      desktop:
-        "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/239/7949d031-9a79-4639-b85e-62fd90af85a9",
+      mobile: "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/239/eeaa624c-a3e1-45e8-a6fe-034233cfbcd0",
+      desktop: "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/239/7949d031-9a79-4639-b85e-62fd90af85a9"
     },
     {
       alt: "/feminino",
@@ -75,16 +71,14 @@ const DEFAULT_PROPS = {
         href: "https://www.deco.cx/",
         label: "deco.cx",
         title: "Demo Store",
-        subTitle: "Visit our site and start building now:",
+        subTitle: "Visit our site and start building now:"
       },
-      mobile:
-        "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/239/ae89571c-4a7c-44bf-9aeb-a341fd049d19",
-      desktop:
-        "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/239/7ec121e4-5cfe-4b7b-b942-d1ed4493803d",
-    },
+      mobile: "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/239/ae89571c-4a7c-44bf-9aeb-a341fd049d19",
+      desktop: "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/239/7ec121e4-5cfe-4b7b-b942-d1ed4493803d"
+    }
   ],
-  preload: true,
-};
+  preload: true
+}
 
 function BannerItem({ image, lcp }: { image: Banner; lcp?: boolean }) {
   const {
@@ -98,9 +92,9 @@ function BannerItem({ image, lcp }: { image: Banner; lcp?: boolean }) {
     <a
       href={action?.href ?? "#"}
       aria-label={action?.label}
-      class="relative h-[600px] overflow-y-hidden w-full"
+      class="relative overflow-y-hidden w-full m-auto !w-[1140px]"
     >
-      <Picture preload={lcp}>
+      <Picture preload={lcp} class="flex items-center">
         <Source
           media="(max-width: 767px)"
           fetchPriority={lcp ? "high" : "auto"}
@@ -112,27 +106,16 @@ function BannerItem({ image, lcp }: { image: Banner; lcp?: boolean }) {
           media="(min-width: 768px)"
           fetchPriority={lcp ? "high" : "auto"}
           src={desktop}
-          width={1440}
+          width={1140}
           height={600}
         />
         <img
-          class="object-cover w-full h-full"
+          class="object-cover w-[1140px] h-full pl-10 pr-10"
           loading={lcp ? "eager" : "lazy"}
           src={desktop}
           alt={alt}
         />
       </Picture>
-      {action && (
-        <div class="absolute h-min top-0 bottom-0 m-auto left-0 right-0 sm:right-auto sm:left-[12%] max-h-min max-w-[235px] flex flex-col gap-4 p-4 rounded glass">
-          <span class="text-6xl font-medium text-base-100">
-            {action.title}
-          </span>
-          <span class="font-medium text-xl text-base-100">
-            {action.subTitle}
-          </span>
-          <Button class="glass">{action.label}</Button>
-        </div>
-      )}
     </a>
   );
 }
@@ -196,15 +179,15 @@ function Buttons() {
   );
 }
 
-function BannerCarousel(props: Props) {
-  const { images, preload, interval } = { ...DEFAULT_PROPS, ...props };
+function BannerCarousel(props : Props) {
+  const { images, preload, interval } = {...DEFAULT_PROPS, ...props}
 
   const id = useId();
 
   return (
     <div
       id={id}
-      class="grid grid-cols-[48px_1fr_48px] sm:grid-cols-[120px_1fr_120px] grid-rows-[1fr_48px_1fr_64px]"
+      class="grid grid-cols-[48px_1fr_48px] grid-rows-[1fr_48px_1fr_64px]"
     >
       <Slider class="carousel carousel-center w-full col-span-full row-span-full gap-6">
         {images?.map((image, index) => (
@@ -213,10 +196,6 @@ function BannerCarousel(props: Props) {
           </Slider.Item>
         ))}
       </Slider>
-
-      <Buttons />
-
-      <Dots images={images} interval={interval} />
 
       <SliderJS rootId={id} interval={interval && interval * 1e3} infinite />
     </div>

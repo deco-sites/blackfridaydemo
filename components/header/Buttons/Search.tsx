@@ -14,7 +14,7 @@ export default function SearchButton() {
           displaySearchPopup.value = !displaySearchPopup.value;
         }}
       >
-        <Icon id="MagnifyingGlass" size={24} strokeWidth={0.1} />
+        <Icon id="search1" size={24} strokeWidth={2.1} />
       </Button>
       <Button
         class="btn-circle btn-sm btn-ghost sm:hidden"
@@ -23,7 +23,7 @@ export default function SearchButton() {
           displaySearchDrawer.value = !displaySearchDrawer.value;
         }}
       >
-        <Icon id="MagnifyingGlass" size={24} strokeWidth={0.1} />
+        <Icon id="search1" size={44} strokeWidth={2.1} />
       </Button>
     </>
   );
