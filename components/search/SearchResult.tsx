@@ -1,5 +1,5 @@
 import { SendEventOnLoad } from "$store/components/Analytics.tsx";
-import { Layout as CardLayout } from "$store/components/product/ProductCard.tsx";
+import { Layout as cardLayout } from "$store/components/product/ProductCard.tsx";
 import Filters from "$store/components/search/Filters.tsx";
 import Icon from "$store/components/ui/Icon.tsx";
 import SearchControls from "$store/islands/SearchControls.tsx";
@@ -16,14 +16,14 @@ export interface Layout {
   /**
    * @description Number of products per line on grid
    */
-  columns?: Columns;
+  columns: Columns;
 }
 
 export interface Props {
   /** @title Integration */
   page: ProductListingPage | null;
   layout?: Layout;
-  cardLayout?: CardLayout;
+  cardLayout?: cardLayout;
 }
 
 function NotFound() {
@@ -53,20 +53,17 @@ function Result({
 
         <div class="flex flex-row">
           {layout?.variant === "aside" && filters.length > 0 && (
-            <aside class="hidden sm:block w-min min-w-[250px]">
+            <aside class="hidden sm:block w-min min-w-[250px] !text-[#FFF]">
               <Filters filters={filters} />
             </aside>
           )}
           <div class="flex-grow">
-            <ProductGallery
-              products={products}
-              layout={{ card: cardLayout, columns: layout?.columns }}
-            />
+            <ProductGallery products={products} layout={cardLayout} />
           </div>
         </div>
 
         <div class="flex justify-center my-4">
-          <div class="join">
+          <div class="join text-[#FFF]">
             <a
               aria-label="previous page link"
               rel="prev"
@@ -109,6 +106,7 @@ function Result({
     </>
   );
 }
+
 
 function SearchResult({ page, ...props }: Props) {
   if (!page) {

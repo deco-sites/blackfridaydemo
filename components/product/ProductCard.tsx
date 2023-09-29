@@ -98,7 +98,7 @@ function ProductCard(
       aria-label="view product"
       class="btn btn-block"
     >
-      {l?.basics?.ctaText || "Ver produto"}
+      {l?.basics?.ctaText || "Comprar"}
     </a>
   );
 
@@ -106,7 +106,7 @@ function ProductCard(
     <div
       id={id}
       class={`card card-compact group w-full ${
-        align === "center" ? "text-center" : "text-start"
+        align === "center" ? "text-center" : "text-center"
       } ${l?.onMouseOver?.showCardShadow ? "lg:hover:card-bordered" : ""}
         ${
         l?.onMouseOver?.card === "Move up" &&
@@ -218,7 +218,7 @@ function ProductCard(
             {l?.hide?.skuSelector ? "" : (
               <ul
                 class={`flex items-center gap-2 w-full overflow-auto p-3 ${
-                  align === "center" ? "justify-center" : "justify-start"
+                  align === "center" ? "justify-center" : "justify-center"
                 } ${l?.onMouseOver?.showSkuSelector ? "lg:hidden" : ""}`}
               >
                 {skuSelector}
