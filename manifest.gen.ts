@@ -3,68 +3,71 @@
 // This file is automatically updated during development when running `dev.ts`.
 
 import * as $$$0 from "./loaders/Layouts/ProductCard.tsx";
-import * as $$$$$$0 from "./sections/Category/CategoryBanner.tsx";
-import * as $$$$$$1 from "./sections/Category/CategoryList.tsx";
-import * as $$$$$$2 from "./sections/Content/Benefits.tsx";
-import * as $$$$$$3 from "./sections/Content/Faq.tsx";
-import * as $$$$$$4 from "./sections/Content/Logos.tsx";
-import * as $$$$$$5 from "./sections/Content/Testimonials.tsx";
-import * as $$$$$$6 from "./sections/Footer/Footer.tsx";
-import * as $$$$$$7 from "./sections/Header/Header.tsx";
-import * as $$$$$$8 from "./sections/Images/BannerGrid.tsx";
-import * as $$$$$$9 from "./sections/Images/Carousel.tsx";
+import * as $$$$$$0 from "./sections/Social/InstagramPosts.tsx";
+import * as $$$$$$1 from "./sections/Social/WhatsApp.tsx";
+import * as $$$$$$2 from "./sections/Theme/Theme.tsx";
+import * as $$$$$$3 from "./sections/Content/Testimonials.tsx";
+import * as $$$$$$4 from "./sections/Content/Faq.tsx";
+import * as $$$$$$5 from "./sections/Content/Logos.tsx";
+import * as $$$$$$6 from "./sections/Content/Benefits.tsx";
+import * as $$$$$$7 from "./sections/Images/ShoppableBanner.tsx";
+import * as $$$$$$8 from "./sections/Images/Carousel.tsx";
+import * as $$$$$$9 from "./sections/Images/BannerGrid.tsx";
 import * as $$$$$$10 from "./sections/Images/ImageGallery.tsx";
-import * as $$$$$$11 from "./sections/Images/ShoppableBanner.tsx";
-import * as $$$$$$12 from "./sections/Links/LinkTree.tsx";
-import * as $$$$$$13 from "./sections/Links/Shortcuts.tsx";
-import * as $$$$$$14 from "./sections/Miscellaneous/CampaignTimer.tsx";
-import * as $$$$$$15 from "./sections/Miscellaneous/CookieConsent.tsx";
-import * as $$$$$$16 from "./sections/Newsletter/Newsletter.tsx";
-import * as $$$$$$17 from "./sections/Product/ProductDetails.tsx";
-import * as $$$$$$18 from "./sections/Product/ProductShelf.tsx";
-import * as $$$$$$19 from "./sections/Product/SearchResult.tsx";
-import * as $$$$$$20 from "./sections/Product/Wishlist.tsx";
-import * as $$$$$$21 from "./sections/Social/InstagramPosts.tsx";
-import * as $$$$$$22 from "./sections/Social/WhatsApp.tsx";
-import * as $$$$$$23 from "./sections/Theme/Theme.tsx";
-import * as $$$$$$$$$$$0 from "./apps/decohub.ts";
-import * as $$$$$$$$$$$1 from "./apps/site.ts";
+import * as $$$$$$11 from "./sections/Category/CategoryBanner.tsx";
+import * as $$$$$$12 from "./sections/Category/CategoryList.tsx";
+import * as $$$$$$13 from "./sections/Newsletter/Newsletter.tsx";
+import * as $$$$$$14 from "./sections/Footer/Footer.tsx";
+import * as $$$$$$15 from "./sections/Miscellaneous/CampaignTimer.tsx";
+import * as $$$$$$16 from "./sections/Miscellaneous/CookieConsent.tsx";
+import * as $$$$$$17 from "./sections/SingleBannerTopo/SingleBannerTopo.tsx";
+import * as $$$$$$18 from "./sections/Links/Shortcuts.tsx";
+import * as $$$$$$19 from "./sections/Links/LinkTree.tsx";
+import * as $$$$$$20 from "./sections/Product/ProductShelf.tsx";
+import * as $$$$$$21 from "./sections/Product/Wishlist.tsx";
+import * as $$$$$$22 from "./sections/Product/ProductDetails.tsx";
+import * as $$$$$$23 from "./sections/Product/SearchResult.tsx";
+import * as $$$$$$24 from "./sections/Header/Header.tsx";
+import * as $$$$$$$$$$$0 from "./apps/site.ts";
+import * as $$$$$$$$$$$1 from "./apps/decohub.ts";
 
 const manifest = {
   "loaders": {
     "deco-sites/blackfridaydemo/loaders/Layouts/ProductCard.tsx": $$$0,
   },
   "sections": {
-    "deco-sites/blackfridaydemo/sections/Category/CategoryBanner.tsx": $$$$$$0,
-    "deco-sites/blackfridaydemo/sections/Category/CategoryList.tsx": $$$$$$1,
-    "deco-sites/blackfridaydemo/sections/Content/Benefits.tsx": $$$$$$2,
-    "deco-sites/blackfridaydemo/sections/Content/Faq.tsx": $$$$$$3,
-    "deco-sites/blackfridaydemo/sections/Content/Logos.tsx": $$$$$$4,
-    "deco-sites/blackfridaydemo/sections/Content/Testimonials.tsx": $$$$$$5,
-    "deco-sites/blackfridaydemo/sections/Footer/Footer.tsx": $$$$$$6,
-    "deco-sites/blackfridaydemo/sections/Header/Header.tsx": $$$$$$7,
-    "deco-sites/blackfridaydemo/sections/Images/BannerGrid.tsx": $$$$$$8,
-    "deco-sites/blackfridaydemo/sections/Images/Carousel.tsx": $$$$$$9,
+    "deco-sites/blackfridaydemo/sections/Category/CategoryBanner.tsx": $$$$$$11,
+    "deco-sites/blackfridaydemo/sections/Category/CategoryList.tsx": $$$$$$12,
+    "deco-sites/blackfridaydemo/sections/Content/Benefits.tsx": $$$$$$6,
+    "deco-sites/blackfridaydemo/sections/Content/Faq.tsx": $$$$$$4,
+    "deco-sites/blackfridaydemo/sections/Content/Logos.tsx": $$$$$$5,
+    "deco-sites/blackfridaydemo/sections/Content/Testimonials.tsx": $$$$$$3,
+    "deco-sites/blackfridaydemo/sections/Footer/Footer.tsx": $$$$$$14,
+    "deco-sites/blackfridaydemo/sections/Header/Header.tsx": $$$$$$24,
+    "deco-sites/blackfridaydemo/sections/Images/BannerGrid.tsx": $$$$$$9,
+    "deco-sites/blackfridaydemo/sections/Images/Carousel.tsx": $$$$$$8,
     "deco-sites/blackfridaydemo/sections/Images/ImageGallery.tsx": $$$$$$10,
-    "deco-sites/blackfridaydemo/sections/Images/ShoppableBanner.tsx": $$$$$$11,
-    "deco-sites/blackfridaydemo/sections/Links/LinkTree.tsx": $$$$$$12,
-    "deco-sites/blackfridaydemo/sections/Links/Shortcuts.tsx": $$$$$$13,
+    "deco-sites/blackfridaydemo/sections/Images/ShoppableBanner.tsx": $$$$$$7,
+    "deco-sites/blackfridaydemo/sections/Links/LinkTree.tsx": $$$$$$19,
+    "deco-sites/blackfridaydemo/sections/Links/Shortcuts.tsx": $$$$$$18,
     "deco-sites/blackfridaydemo/sections/Miscellaneous/CampaignTimer.tsx":
-      $$$$$$14,
-    "deco-sites/blackfridaydemo/sections/Miscellaneous/CookieConsent.tsx":
       $$$$$$15,
-    "deco-sites/blackfridaydemo/sections/Newsletter/Newsletter.tsx": $$$$$$16,
-    "deco-sites/blackfridaydemo/sections/Product/ProductDetails.tsx": $$$$$$17,
-    "deco-sites/blackfridaydemo/sections/Product/ProductShelf.tsx": $$$$$$18,
-    "deco-sites/blackfridaydemo/sections/Product/SearchResult.tsx": $$$$$$19,
-    "deco-sites/blackfridaydemo/sections/Product/Wishlist.tsx": $$$$$$20,
-    "deco-sites/blackfridaydemo/sections/Social/InstagramPosts.tsx": $$$$$$21,
-    "deco-sites/blackfridaydemo/sections/Social/WhatsApp.tsx": $$$$$$22,
-    "deco-sites/blackfridaydemo/sections/Theme/Theme.tsx": $$$$$$23,
+    "deco-sites/blackfridaydemo/sections/Miscellaneous/CookieConsent.tsx":
+      $$$$$$16,
+    "deco-sites/blackfridaydemo/sections/Newsletter/Newsletter.tsx": $$$$$$13,
+    "deco-sites/blackfridaydemo/sections/Product/ProductDetails.tsx": $$$$$$22,
+    "deco-sites/blackfridaydemo/sections/Product/ProductShelf.tsx": $$$$$$20,
+    "deco-sites/blackfridaydemo/sections/Product/SearchResult.tsx": $$$$$$23,
+    "deco-sites/blackfridaydemo/sections/Product/Wishlist.tsx": $$$$$$21,
+    "deco-sites/blackfridaydemo/sections/SingleBannerTopo/SingleBannerTopo.tsx":
+      $$$$$$17,
+    "deco-sites/blackfridaydemo/sections/Social/InstagramPosts.tsx": $$$$$$0,
+    "deco-sites/blackfridaydemo/sections/Social/WhatsApp.tsx": $$$$$$1,
+    "deco-sites/blackfridaydemo/sections/Theme/Theme.tsx": $$$$$$2,
   },
   "apps": {
-    "deco-sites/blackfridaydemo/apps/decohub.ts": $$$$$$$$$$$0,
-    "deco-sites/blackfridaydemo/apps/site.ts": $$$$$$$$$$$1,
+    "deco-sites/blackfridaydemo/apps/decohub.ts": $$$$$$$$$$$1,
+    "deco-sites/blackfridaydemo/apps/site.ts": $$$$$$$$$$$0,
   },
   "name": "deco-sites/blackfridaydemo",
   "baseUrl": import.meta.url,
