@@ -86,7 +86,7 @@ function ProductCard(
       : "center";
   const skuSelector = variants.map(([value, link]) => (
     <li>
-      <a href="https://www.usevertice.com/black-week">
+      <a href="https://www.usevertice.com/black-friday">
         <Avatar
           variant={link === url ? "active" : link ? "default" : "disabled"}
           content={value}
@@ -96,7 +96,7 @@ function ProductCard(
   ));
   const cta = (
     <a
-      href="https://www.usevertice.com/black-week"
+      href="https://www.usevertice.com/black-friday"
       aria-label="view product"
       class="btn btn-block !bg-[#000] !text-[#FFF]"
     >
@@ -165,7 +165,7 @@ function ProductCard(
         </div>
         {/* Product Images */}
         <a
-          href="https://www.usevertice.com/black-week"
+          href="https://www.usevertice.com/black-friday"
           aria-label="view product"
           class="grid grid-cols-1 grid-rows-1 w-full"
         >

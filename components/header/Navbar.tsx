@@ -26,7 +26,7 @@ function Navbar({ items, searchbar, logo }: {
         style={{ height: navbarHeight }}
         class="md:hidden flex flex-row justify-between items-center border-b border-base-200 w-full h-full pl-2 pr-6 gap-2"
       >
-        <MenuButton />
+        {/* <MenuButton /> */}
 
         {logo && (
           <a
@@ -35,7 +35,7 @@ function Navbar({ items, searchbar, logo }: {
             style={{ minHeight: navbarHeight }}
             aria-label="Store logo"
           >
-            <Image src={logo.src} alt={logo.alt} width={186} height={86} />
+            <Image src={logo.src} alt={logo.alt} width={186} height={86} class="m-auto" />
           </a>
         )}
 
@@ -60,7 +60,7 @@ function Navbar({ items, searchbar, logo }: {
           )}
         </div>
         <div class="flex-none w-44 flex items-center justify-end gap-7">
-          <SearchButton />
+          {/* <SearchButton />
           <Searchbar searchbar={searchbar} />
           <a
             class="btn btn-circle btn-sm btn-ghost"
@@ -74,7 +74,7 @@ function Navbar({ items, searchbar, logo }: {
           {platform === "vtex" && <CartButtonVTEX />}
           {platform === "vnda" && <CartButtonVDNA />}
           {platform === "wake" && <CartButtonWake />}
-          {platform === "shopify" && <CartButtonShopify />}
+          {platform === "shopify" && <CartButtonShopify />} */}
         </div>
       </div>
     </>
