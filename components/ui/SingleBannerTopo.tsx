@@ -5,7 +5,8 @@ export interface Props {
     src : ImageWidget,
     srcMobile : ImageWidget,
     link : string,
-    lcp : boolean
+    lcp : boolean,
+    openInNewTab : boolean
 }
 
 const SingleBannerTopo = (props : Props) => {
@@ -14,12 +15,9 @@ const SingleBannerTopo = (props : Props) => {
     console.log(props.link)
 
     return (<>
-        <img
-          class="object-cover w-[1140px] h-full pl-10 pr-10"
-          loading={props.lcp ? "eager": "lazy"}
-          src={props.src}
-          alt={'ok'}
-        />
+        <a href={props.link} target={props.openInNewTab ? '_blank' : 'nope'} class="relative overflow-y-hidden w-full m-auto !w-[1140px]">
+            <img class="object-cover w-[100%] h-full p-0 m-0" loading={props.lcp ? "eager": "lazy"} src={props.src} alt={'ok'}/>
+        </a>
     </>)
 
 }
