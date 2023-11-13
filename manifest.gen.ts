@@ -23,11 +23,11 @@ import * as $$$$$$16 from "./sections/Miscellaneous/CookieConsent.tsx";
 import * as $$$$$$17 from "./sections/SingleBannerTopo/SingleBannerTopo.tsx";
 import * as $$$$$$18 from "./sections/Links/Shortcuts.tsx";
 import * as $$$$$$19 from "./sections/Links/LinkTree.tsx";
-import * as $$$$$$21 from "./sections/Product/ProductShelf.tsx";
-import * as $$$$$$22 from "./sections/Product/Wishlist.tsx";
-import * as $$$$$$23 from "./sections/Product/ProductDetails.tsx";
-import * as $$$$$$24 from "./sections/Product/SearchResult.tsx";
-import * as $$$$$$25 from "./sections/Header/Header.tsx";
+import * as $$$$$$20 from "./sections/Product/ProductShelf.tsx";
+import * as $$$$$$21 from "./sections/Product/Wishlist.tsx";
+import * as $$$$$$22 from "./sections/Product/ProductDetails.tsx";
+import * as $$$$$$23 from "./sections/Product/SearchResult.tsx";
+import * as $$$$$$24 from "./sections/Header/Header.tsx";
 import * as $$$$$$$$$$$0 from "./apps/site.ts";
 import * as $$$$$$$$$$$1 from "./apps/decohub.ts";
 
@@ -43,7 +43,7 @@ const manifest = {
     "deco-sites/blackfridaydemo/sections/Content/Logos.tsx": $$$$$$5,
     "deco-sites/blackfridaydemo/sections/Content/Testimonials.tsx": $$$$$$3,
     "deco-sites/blackfridaydemo/sections/Footer/Footer.tsx": $$$$$$14,
-    "deco-sites/blackfridaydemo/sections/Header/Header.tsx": $$$$$$25,
+    "deco-sites/blackfridaydemo/sections/Header/Header.tsx": $$$$$$24,
     "deco-sites/blackfridaydemo/sections/Images/BannerGrid.tsx": $$$$$$9,
     "deco-sites/blackfridaydemo/sections/Images/Carousel.tsx": $$$$$$8,
     "deco-sites/blackfridaydemo/sections/Images/ImageGallery.tsx": $$$$$$10,
@@ -55,10 +55,10 @@ const manifest = {
     "deco-sites/blackfridaydemo/sections/Miscellaneous/CookieConsent.tsx":
       $$$$$$16,
     "deco-sites/blackfridaydemo/sections/Newsletter/Newsletter.tsx": $$$$$$13,
-    "deco-sites/blackfridaydemo/sections/Product/ProductDetails.tsx": $$$$$$23,
-    "deco-sites/blackfridaydemo/sections/Product/ProductShelf.tsx": $$$$$$21,
-    "deco-sites/blackfridaydemo/sections/Product/SearchResult.tsx": $$$$$$24,
-    "deco-sites/blackfridaydemo/sections/Product/Wishlist.tsx": $$$$$$22,
+    "deco-sites/blackfridaydemo/sections/Product/ProductDetails.tsx": $$$$$$22,
+    "deco-sites/blackfridaydemo/sections/Product/ProductShelf.tsx": $$$$$$20,
+    "deco-sites/blackfridaydemo/sections/Product/SearchResult.tsx": $$$$$$23,
+    "deco-sites/blackfridaydemo/sections/Product/Wishlist.tsx": $$$$$$21,
     "deco-sites/blackfridaydemo/sections/SingleBannerTopo/SingleBannerTopo.tsx":
       $$$$$$17,
     "deco-sites/blackfridaydemo/sections/Social/InstagramPosts.tsx": $$$$$$0,
