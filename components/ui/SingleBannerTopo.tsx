@@ -23,7 +23,7 @@ const SingleBannerTopo = (props : Props) => {
             <picture>
                 <source media="(min-width: 769px)" srcset={props.src} />
                 <source media="(max-width: 768px)" srcset={props.srcMobile} />
-                <img class={`object-cover w-[100%] h-full p-0 lg:mt-60`} loading={props.lcp ? "eager": "lazy"} src={props.src} alt={'ok'}/>
+                <img class={`object-cover w-[100%] h-full p-0`} loading={props.lcp ? "eager": "lazy"} src={props.src} alt={'ok'}/>
             </picture>        
         </a>
     </>)
