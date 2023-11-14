@@ -214,7 +214,7 @@ function Footer({
 
   return (
     <footer
-      class={`w-full flex flex-col pt-10 pb-2 md:pb-10 gap-10 !bg-[#2E2E2F] ${
+      class={`w-full flex flex-col pt-10 pb-2 md:pb-10 gap-10 !bg-[#000] border-t border-white-500 ${
         ColorClasses(layout)
       }`}
     >
